@@ -1,0 +1,2 @@
+# rigtter
+RING czy BING?
