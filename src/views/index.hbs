@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riggter</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <h1 class="logo"><span id="rig">Rig</span>tter</h1>
+
+    <form action="/api/createpost" method="POST" class="cos">
+        <label for="postName">Post name:</label><br>
+        <input type="text" name="postName"><br>
+        <label for="postContent">Post content:</label><br>
+        <textarea name="postContent" cols="40" rows="5"></textarea>
+        <input type="submit" value="Create post">
+    </form> 
+
+        {{#each posts}}
+        <div class="cos post">
+            <span class="creationdate">{{this.creationDate}}</span>
+            <h2>{{this.postName}}</h2>
+            <p>{{this.postContent}}</p>
+        </div>
+        {{/each}}
+</body>
+</html>
